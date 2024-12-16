@@ -27,14 +27,18 @@ int main() {
 }
 
 void part_1() {
-    int seconds;
+    const unsigned seconds_per_minute = 60;
+    const unsigned minutes_per_hour = 60;
+    const unsigned seconds_per_hour = seconds_per_minute * minutes_per_hour;
+    
+    unsigned int seconds;
 
     std::cout << "Enter number of seconds player have been in game: ";
     std::cin >> seconds;
 
-    int hours = seconds / 3600;
-    int minutes = (seconds % 3600) / 60;
-    int remained_seconds = seconds % 60;
+    unsigned int hours = seconds / seconds_per_hour;
+    unsigned int minutes = (seconds % seconds_per_hour) / seconds_per_minute;
+    unsigned int remained_seconds = seconds % seconds_per_minute;
 
     std::cout << hours << " hour, " << minutes << " minutes, " << remained_seconds << " seconds"<< std::endl;
 }

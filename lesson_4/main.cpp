@@ -39,7 +39,7 @@ void part_1() {
         std::cout << "The first number is the biggest: " << first_number << std::endl;
     } else if (second_number > first_number && second_number > third_number) {
         std::cout << "The second number is the biggest: " << second_number << std::endl;
-    } else if (third_number > first_number && third_number > second_number) {
+    } else {
         std::cout << "The third number is the biggest: " << third_number << std::endl;
     }
 }
